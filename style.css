@@ -1,126 +1,119 @@
-/* General body styling */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #fafafa;
+  color: white;
+  background-image: url('background.jpg'); /* Replace with actual background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
-/* Login container */
-.login-container {
-  background: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 4px;
-  width: 350px;
-  padding: 40px 20px;
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 40px;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 100%;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Instagram logo */
-.login-container h1 {
-  font-family: 'Billabong', cursive;
-  font-size: 48px;
-  color: #262626;
+.sign-in-form h1 {
   margin-bottom: 20px;
 }
 
-/* Input fields */
 .input-group {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: left;
 }
 
 .input-group input {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
-  border: 1px solid #dbdbdb;
+  border: none;
   border-radius: 4px;
-  background-color: #fafafa;
-  outline: none;
+  margin-bottom: 5px;
+  background: #333;
+  color: white;
+  font-size: 14px;
 }
 
-.input-group input:focus {
-  border-color: #a8a8a8;
+.input-group .error-message {
+  color: #e87c03;
+  font-size: 12px;
+  display: none; /* Initially hidden */
 }
 
-/* Login button */
 .btn {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #0095f6;
-  color: #fff;
+  background: #e50914;
   border: none;
   border-radius: 4px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 .btn:hover {
-  background-color: #007ac1;
+  background: #f40612;
 }
 
-/* Divider */
-.divider {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  color: #8e8e8e;
-  font-size: 12px;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #dbdbdb;
-}
-
-.divider::before {
-  margin-right: 10px;
-}
-
-.divider::after {
-  margin-left: 10px;
-}
-
-/* Options */
 .options {
+  margin-top: 20px;
+}
+
+.options p {
+  margin: 10px 0;
+}
+
+.btn-secondary {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #444;
+}
+
+.forgot-password {
+  color: #757575;
+  text-decoration: none;
+  display: block;
   margin-top: 10px;
   font-size: 14px;
-  color: #385185;
 }
 
-.options a {
-  color: #385185;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.options a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #8e8e8e;
-}
-
-.footer a {
-  color: #0095f6;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.footer a:hover {
+.forgot-password:hover {
   text-decoration: underline;
 }
